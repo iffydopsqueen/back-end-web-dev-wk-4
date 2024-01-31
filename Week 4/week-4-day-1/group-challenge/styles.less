@@ -1,20 +1,28 @@
-//Using variables
-$r: 0;
-$g: 0;
-$b: 0;
+// Using "@import"
+@import 'colors.less';
 
-//Using @extend
+//Using variables
+@r: 0;
+@g: 0;
+@b: 0;
+
+// Using "mixin"
 .globalstyle {
     font-family: Verdana, sans-serif;
     font-size: 15px;
     line-height:1.5;
 }
+
 html {
-    @extend .globalstyle;
+    .globalstyle;
 }
+
 body {
-    @extend .globalstyle;
+    .globalstyle;
 }
+
+// Using interpolation
+@color: color;
 
 //Using nesting
 .card {
@@ -22,11 +30,11 @@ body {
         list-style-type: none;
         padding: 0;
         margin:0;
-        border: 1px solid rgb(175, 174, 174) !important;
+        border: 1px solid @card-info-border-color;
         text-align:center;
         li {
             padding: 8px 16px;
-            border-bottom:1px solid #ddd
+            border-bottom:1px solid @list-color;
         }
         li:last-child {
             border-bottom: none
@@ -45,23 +53,23 @@ body {
             }
         }
         .card-btn {
-            color: #000 !important;
-            background-color: #f1f1f1 !important;
+            @{color}: @card-btn-text-color;
+            background-@{color}: @card-btn-bg-color;
             padding-top: 24px !important;
             padding-bottom: 24px !important;
             .button {
-                color: #fff !important;
-                background-color: #4CAF50 !important;
+                @{color}: @button-text-color;
+                background-@{color}: @button-bg-color;
                 padding: 12px 24px !important
             }
         }
     }
     .card-shadow:hover {
-        box-shadow: 0 4px 10px 0 rgba($r, $g, $b, 0.2), 0 4px 20px 0 rgba($r, $g, $b, 0.19)
+        box-shadow: 0 4px 10px 0 rgba(@r, @g, @b, 0.2), 0 4px 20px 0 rgba(@r, @g, @b, 0.19)
     }
     .card-header {
-        color: #fff !important;
-        background-color: #000 !important;
+        @{color}: @card-header-text-color;
+        background-@{color}: @card-header-bg-color;
         font-size:24px !important;
         padding-top: 32px !important;
         padding-bottom:32px !important
