@@ -13,7 +13,7 @@
 
 // Using mixin
 .common-styles {
-    width: 100%;
+    @{width}: 100%;
     float: left;
 }
 
@@ -23,11 +23,11 @@
 }
 
 body {
-    width: 100%;
+    @{width}: 100%;
     height: 100%;
-    color: rgb(102, 102, 102);
-    font-size: 1em;
-    font-family: Poppins;
+    @{color}: @bodyColor;
+    @{fontSize}: 1em;
+    font-family: @fontPoppins;
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
@@ -36,57 +36,50 @@ body {
 // Using nesting 
 .about_main {
     .collection_section {
-        width: 100%;
-        float: left;
-        margin-top: 40px;
+        .common-styles;
+        @{margin}-top: 40px;
         .container {
             .new_text {
-                width: 100%;
-                float: left;
-                font-size: 2em;
-                color: rgb(12, 1, 22);
+                .common-styles;
+                @{fontSize}: 2em;
+                @{color}: @containerTextColor;
             }
             .consectetur_text {
-                width: 100%;
-                float: left;
-                font-size: 1.2em;
-                color: rgb(12, 1, 22);
+                .common-styles;
+                @{fontSize}: 1.2em;
+                @{color}: @containerTextColor;
                 font-weight: 400;
-                margin-left: 0px;
-                padding-bottom: 30px;
+                @{margin}-left: 0px;
+                @{padding}-bottom: 30px;
             }
         }
     }
 
     .collection_section_3 {
-        width: 100%;
-        float: left;
-        padding-top: 0px;
+        .common-styles;
+        @{padding}-top: 0px;
         .container {
             .racing_shoes {
-                width: 100%;
-                float: left;
-                background-color: rgb(234, 231, 231);
+                .common-styles;
+                background-@{color}: @containerRacingShoes;
                 height: auto;
-                padding-top: 70px;
+                @{padding}-top: 70px;
                 background-size: 100%;
-                padding-bottom: 100px;
-                margin-bottom: 100px;
+                @{padding}-bottom: 100px;
+                @{margin}-bottom: 100px;
                 .shoes-img3 {
-                    width: 100%;
-                    float: left;
+                    .common-styles;
                     text-align: center;
                     img {
-                        margin-top: 4em;
-                        width: 70%;
+                        @{margin}-top: 4em;
+                        @{width}: 70%;
                     }
                 }
 
                 .sale_text {
-                    width: 100%;
-                    float: left;
-                    font-size: 3em;
-                    color: rgb(207, 67, 79);
+                    .common-styles;
+                    @{fontSize}: 3em;
+                    @{color}: @redColor;
                     line-height: 75px;
                 }
             }
@@ -98,44 +91,41 @@ body {
     .container {
         .racing_shoes {
             .number_text {
-                width: 100%;
-                float: left;
-                font-size: 3em;
-                color: rgb(207, 67, 79);
+                .common-styles;
+                @{fontSize}: 3em;
+                @{color}: @redColor;
                 line-height: 75px;
             }
 
             .seemore {
-                width: 80%;
+                @{width}: 80%;
                 height: 50px;
-                color: rgb(255, 255, 255);
-                background-color: rgb(207, 67, 79);
-                font-size: 1.7em;
-                margin-top: 35px;
+                @{color}: @whiteColor;
+                background-@{color}: @redColor;
+                @{fontSize}: 1.7em;
+                @{margin}-top: 35px;
             }
         }
     }
 }
 
 .collection_text {
-    width: 100%;
-    float: left;
-    color: rgb(255, 255, 255);
+    .common-styles;
+    @{color}: @whiteColor;
     text-align: center;
-    font-family: 'Syncopate', sans-serif;
+    font-family: @fontSyncopate;
     font-weight: bold;
-    font-size: 3em;
-    background-color: rgb(207, 67, 79);
-    padding: 30px 0px;
+    @{fontSize}: 3em;
+    background-@{color}: @redColor;
+    @{padding}: 30px 0px;
 }
 
 .copyright {
-  width: 100%;
-  float: left;
-  font-size: 1em;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 10px 0px;
-  background-color: rgb(207, 67, 79);
-  font-family: Poppins;
+    .common-styles;
+    @{fontSize}: 1em;
+    @{color}: @whiteColor;
+    text-align: center;
+    @{padding}: 10px 0px;
+    background-@{color}: @redColor;
+    font-family: @fontPoppins;
 }
