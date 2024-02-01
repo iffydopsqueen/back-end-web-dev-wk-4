@@ -1,0 +1,15 @@
+{
+  "name": "class-challenge",
+  "version": "1.0.0",
+  "description": "NodeJS HTTPS Server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "IE",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
