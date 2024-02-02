@@ -1,0 +1,20 @@
+{
+  "name": "sass-homework",
+  "version": "1.0.0",
+  "description": "Using SASS principles",
+  "main": "index.html",
+  "scripts": {
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ scss/",
+    "start": "npm run watch:scss",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:scss": "onchange \"scss/*.scss\" -- npm run scss"
+  },
+  "author": "IE",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "node-sass": "^9.0.0",
+    "onchange": "^7.1.0"
+  }
+}
