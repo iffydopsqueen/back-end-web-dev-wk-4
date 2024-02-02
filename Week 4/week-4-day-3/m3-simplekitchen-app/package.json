@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon ./start.js"
+    "lite": "lite-server",
+    "watch": "nodemon ./start.js",
+    "scss": "node-sass -o css/ scss/",
+    "start": "npm run watch:scss",
+    "watch:scss": "onchange \"scss/*.scss\" -- npm run scss",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "IE",
   "license": "ISC",
@@ -15,7 +19,10 @@
     "express": "^4.18.2",
     "express-validator": "^7.0.1",
     "http-auth": "^4.2.0",
+    "lite-server": "^2.6.1",
     "mongoose": "^8.1.0",
+    "node-sass": "^9.0.0",
+    "onchange": "^7.1.0",
     "pug": "^3.0.2"
   },
   "devDependencies": {
