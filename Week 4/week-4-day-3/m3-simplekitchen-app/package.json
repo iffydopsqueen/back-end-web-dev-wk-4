@@ -6,7 +6,7 @@
   "scripts": {
     "lite": "lite-server",
     "watch": "nodemon ./start.js",
-    "scss": "node-sass -o css/ scss/",
+    "scss": "node-sass -o public/css/ public/scss/",
     "start": "npm run watch:scss",
     "watch:scss": "onchange \"scss/*.scss\" -- npm run scss",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,12 +1,12 @@
-/* Nesting */
-
+/* Importing */
+@import "colors.scss";
 
 /* SCSS */
 
 nav {
     font: {
         size: 1em;
-        font-weight: bold;
+        weight: bold;
     }
     float: left;
     ul {

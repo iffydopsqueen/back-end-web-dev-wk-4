@@ -12,13 +12,13 @@ const basic = auth.basic({
 
 router.get('/', (req, res) => {
   //res.send('It works!');
-  res.render('form', { title: 'Registration form' });
+  res.render('index', { title: 'Registration form' });
 });
 
 router.get('/registrations', basic.check((req, res) => {
   Registration.find()
     .then((registrations) => {
-      res.render('index', { title: 'Listing registrations', registrations });
+      res.render('registrants', { title: 'Listing registrations', registrations });
     })
     .catch(() => { 
       res.send('Sorry! Something went wrong.'); 
