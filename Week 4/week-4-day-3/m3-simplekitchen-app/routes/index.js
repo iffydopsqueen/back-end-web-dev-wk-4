@@ -10,12 +10,23 @@ const basic = auth.basic({
   file: path.join(__dirname, '../users.htpasswd'),
 });
 
+// Route for "/"
 router.get('/', (req, res) => {
-  //res.send('It works!');
-  res.render('index', { title: 'Registration form' });
+  res.render('index', { title: 'Home' });
 });
 
-router.get('/registrations', basic.check((req, res) => {
+// Route for "/register"
+router.get('/register', (req, res) => {
+  res.render('register', { title: 'Register' });
+});
+
+// Route for "/thankyou"
+router.get('/thankyou', (req, res) => {
+  res.render('thankyou', { title: 'Thank You' });
+});
+
+// Route for "/registrants"
+router.get('/registrants', basic.check((req, res) => {
   Registration.find()
     .then((registrations) => {
       res.render('registrants', { title: 'Listing registrations', registrations });
@@ -25,6 +36,7 @@ router.get('/registrations', basic.check((req, res) => {
     });
 }));
 
+// POST route for form submission
 router.post('/', 
     [
         check('name')
@@ -35,12 +47,11 @@ router.post('/',
         .withMessage('Please enter an email'),
     ],
     (req, res) => {
-        //console.log(req.body);
         const errors = validationResult(req);
         if (errors.isEmpty()) {
           const registration = new Registration(req.body);
           registration.save()
-            .then(() => {res.send('Thank you for your registration!');})
+            .then(() => {res.redirect('/thankyou');}) // Redirect to "/thankyou" after successful registration
             .catch((err) => {
               console.log(err);
               res.send('Sorry! Something went wrong.');
