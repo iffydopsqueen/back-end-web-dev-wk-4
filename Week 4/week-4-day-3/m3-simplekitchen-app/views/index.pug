@@ -18,4 +18,7 @@ main
     p Pan-seared chicken, Grill shrimp, mac &amp; cheese&mdash;need we say more?
     button.submit-buttton View Recipes
   section#intro-image
-    img(src='images/louisiana-barbecued-shrimp.webp' alt='Louisiana Barbecued Shrimp')
+    if showForm
+      include form.pug
+    else
+      img(src='images/louisiana-barbecued-shrimp.webp' alt='Louisiana Barbecued Shrimp')

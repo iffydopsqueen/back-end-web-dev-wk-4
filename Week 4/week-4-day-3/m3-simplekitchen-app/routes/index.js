@@ -12,17 +12,17 @@ const basic = auth.basic({
 
 // Route for "/"
 router.get('/', (req, res) => {
-  res.render('index', { title: 'Home' });
+    res.render('index', { title: 'Home', showForm: false });
 });
-
+  
 // Route for "/register"
 router.get('/register', (req, res) => {
-  res.render('register', { title: 'Register' });
+    res.render('index', { title: 'Register', showForm: true });
 });
-
+  
 // Route for "/thankyou"
 router.get('/thankyou', (req, res) => {
-  res.render('thankyou', { title: 'Thank You' });
+    res.render('thankyou', { title: 'Thank You' });
 });
 
 // Route for "/registrants"

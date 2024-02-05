@@ -22,22 +22,6 @@ body {
   padding: 40px 10px;
   background-color: #eee; }
 
-.listing-reg h1 {
-  text-align: center;
-  margin: 0 0 2rem; }
-
-.form-registration {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap; }
-  .form-registration input {
-    width: 100%;
-    margin: 0px 0 10px; }
-  .form-registration .btn {
-    flex: 1 0 100%; }
-
 .my-errors {
   margin: 0 auto;
   padding: 0;
@@ -51,6 +35,47 @@ body {
       content: "! Error : ";
       color: #f00;
       font-weight: bold; }
+
+/* Adjust the form within the image section */
+.form-container {
+  max-width: 400px;
+  /* Adjust the width as needed */
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 8px;
+  /* Add border-radius for rounded corners */ }
+
+.form-control {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px; }
+
+.form-registration {
+  max-width: 350px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; }
+  .form-registration input {
+    width: 100%;
+    margin: 0px 0 15px; }
+  .form-registration .btn {
+    flex: 1 0 100%;
+    margin-top: 15px; }
+
+.register {
+  float: right;
+  margin-left: 1100px;
+  font-weight: bold; }
+
+.listing-reg h4 {
+  text-align: center;
+  margin: 0 0 2rem;
+  font-weight: bold;
+  padding-top: 70px; }
 
 .listing-table {
   width: 100%; }
@@ -89,7 +114,8 @@ main {
   margin: 0 auto; }
   main #intro-image {
     float: left;
-    width: 800px; }
+    width: 750px;
+    height: 500px; }
     main #intro-image img {
       width: 800px; }
   main #intro-text {
@@ -109,7 +135,7 @@ main {
 footer {
   width: 1350px;
   margin: 2em auto;
-  padding-left: 80px;
+  padding-left: 0;
   font-size: 0.85em; }
 
 button, .submit-buttton {
@@ -122,7 +148,14 @@ button, .submit-buttton {
 .submit-buttton {
   border: 1px #313130; }
 
-.register {
-  float: right;
-  margin-left: 1100px;
-  font-weight: bold; }
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #daaa0e;
+  color: white; }
+
+.btn:hover {
+  background-color: #daaa0e; }

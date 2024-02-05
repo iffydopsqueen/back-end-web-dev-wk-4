@@ -1,15 +1,9 @@
 @import "colors.scss";
 @import "nav.scss";
 @import "form.scss";
-
-/* Variables */
-$fontFamily1: Arial, Helvetica, Sans-Serif;
-$fontFamily2: 'Sacramento', cursive;
-$fontSizeH1: 3em;
-$fontSizeH2: 2.5em;
-$fontSizeH3: 2em;
-$fontSizeSmall: 0.85em;
-
+@import "registration.scss";
+@import "listingtable.scss";
+@import "variables.scss";
 
 html {
   // Operations
@@ -37,7 +31,8 @@ main {
 
     #intro-image {
       float: left;
-      width: 800px;
+      width: 750px;
+      height: 500px;
 
       img {
         width: 800px;
@@ -67,7 +62,7 @@ main {
 footer {
     width: 1350px;
     margin: 2em auto;
-    padding-left: 80px;
+    padding-left: 0;
     font-size: $fontSizeSmall;
 }
 
@@ -84,8 +79,16 @@ button {
   border: 1px $color3;
 }
 
-.register {
-  float: right; // Push the "Register" link to the right side
-  margin-left: 1100px;
-  font-weight: bold;
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: $backgroundColor1;
+  color: $color4;
+}
+
+.btn:hover {
+  background-color: $backgroundColor1;
 }
