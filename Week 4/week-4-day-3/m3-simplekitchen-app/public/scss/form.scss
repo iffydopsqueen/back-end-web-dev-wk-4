@@ -5,22 +5,22 @@ body {
 	background-color: #eee;
 }
 
-.my-errors {
-	margin: 0 auto;
-	padding: 0;
-	list-style: none;
-	color: #333;
-	font-size: 1.2rem;
-	display: table;
-	li {
-		margin: 0 0 1rem;
-		&:before {
-			content: "! Error : ";
-			color: #f00;
-			font-weight: bold;
-		}
-	}
-}
+// .my-errors {
+// 	margin: 0 auto;
+// 	padding: 0;
+// 	list-style: none;
+// 	color: #333;
+// 	font-size: 1.2rem;
+// 	display: table;
+// 	li {
+// 		margin: 0 0 1rem;
+// 		&:before {
+// 			content: "! Error : ";
+// 			color: #f00;
+// 			font-weight: bold;
+// 		}
+// 	}
+// }
 
 /* Adjust the form within the image section */
 .form-container {

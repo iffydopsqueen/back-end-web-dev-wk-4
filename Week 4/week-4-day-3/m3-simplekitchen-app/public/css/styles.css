@@ -22,20 +22,6 @@ body {
   padding: 40px 10px;
   background-color: #eee; }
 
-.my-errors {
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  color: #333;
-  font-size: 1.2rem;
-  display: table; }
-  .my-errors li {
-    margin: 0 0 1rem; }
-    .my-errors li:before {
-      content: "! Error : ";
-      color: #f00;
-      font-weight: bold; }
-
 /* Adjust the form within the image section */
 .form-container {
   max-width: 400px;
@@ -54,8 +40,8 @@ body {
   border-radius: 4px; }
 
 .form-registration {
-  max-width: 350px;
-  padding: 10px;
+  max-width: 300px;
+  padding: 5px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap; }
@@ -75,10 +61,16 @@ body {
   text-align: center;
   margin: 0 0 2rem;
   font-weight: bold;
-  padding-top: 70px; }
+  padding-top: 50px; }
+
+.listing-reg h1 {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 15px; }
 
 .listing-table {
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   .listing-table th {
     padding: 10px;
     border-bottom: 1px solid #666;
@@ -118,6 +110,16 @@ main {
     height: 500px; }
     main #intro-image img {
       width: 800px; }
+    main #intro-image .errormsg {
+      text-align: center;
+      padding-top: 10px; }
+      main #intro-image .errormsg .my-errors {
+        color: #333;
+        font-size: 1.2rem; }
+        main #intro-image .errormsg .my-errors li:before {
+          content: "! Error : ";
+          color: #f00;
+          font-weight: bold; }
   main #intro-text {
     width: 550px;
     height: 407px;
@@ -140,7 +142,7 @@ footer {
 
 button, .submit-buttton {
   color: white;
-  width: 100px;
+  width: auto;
   height: 40px;
   background: #daaa0e;
   margin-top: 2em; }
