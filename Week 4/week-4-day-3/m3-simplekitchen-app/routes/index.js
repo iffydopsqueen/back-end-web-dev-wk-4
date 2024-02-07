@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
   
 // Route for "/register"
 router.get('/register', (req, res) => {
-    res.render('index', { title: 'Register', showForm: true });
+    res.render('register', { title: 'Register', showForm: true });
 });
   
 // Route for "/thankyou"
@@ -57,7 +57,7 @@ router.post('/',
               res.send('Sorry! Something went wrong.');
             });
           } else {
-            res.render('form', { 
+            res.render('register', { 
                 title: 'Registration form',
                 errors: errors.array(),
                 data: req.body,

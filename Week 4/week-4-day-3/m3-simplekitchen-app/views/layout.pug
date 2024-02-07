@@ -11,9 +11,18 @@ html
 
   body
     div.container.listing-reg
-      h4 Register to subscribe
-
+      header
+        nav
+          ul
+            li
+              a(href='/') Home
+            li |
+            li
+              a(href='#') Blog
+            li.register
+              a(href='/register') Register  
+      
       block content
 
-  footer
-  | &copy; Copyright 2021
+      footer
+      | &copy; Copyright 2021

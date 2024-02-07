@@ -1,4 +1,48 @@
 extends layout
 
 block content
-    include form.pug
+    main
+        h4 Register to subscribe
+        
+        section#intro-text
+            span Simple Kitchen
+            h3
+                | Simple &amp; Comforting 
+                br
+                |             Recipes All Year Round
+            p Pan-seared chicken, Grill shrimp, mac &amp; cheese&mdash;need we say more?
+            button.submit-buttton View Recipes
+
+        section.errormsg
+            -data = data || {}
+
+            if errors
+                ul.my-errors
+                for error in errors
+                    li= error.msg
+
+        div.form-container
+            form(action="." method="POST" class="form-registration")
+                label(for="name") Name:
+                input(
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    value=data.name
+                )
+
+                label(for="email") Email:
+                input(
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    value=data.email
+                )
+
+                input(
+                    type="submit" 
+                    value="Register"
+                    class="btn btn-lg btn-primary btn-block"
+                )
