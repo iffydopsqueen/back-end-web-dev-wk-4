@@ -42,25 +42,22 @@ main {
         max-width: 100%; // Ensure image fits within its container
         height: auto;
       }
+    }
 
-      .errormsg {
-        text-align: center;
-        padding-top: 0;
-
-        .my-errors {
-          color: #333;
-          font-size: 1.2rem;
-
-          li { 
-            &:before {
-              content: "! Error : ";
-              color: #f00;
-              font-weight: bold;
-            }
-          }
+    .errormsg {
+      text-align: center;
+      padding-top: 0;
+      color: #333;
+      font-size: 0.9rem;
+      list-style: none;  // removes the bullet points
+      li { 
+        &:before {
+          content: "! Error: ";
+          color: #f00;
+          font-weight: bold;
+          font-size: 1rem;
         }
       }
-
     }
 
     #intro-text {
@@ -82,6 +79,19 @@ main {
       }
     }
 }
+
+// .my-errors {
+//   color: #333;
+//   font-size: 1.2rem;
+
+//   li { 
+//     &:before {
+//       content: "! Error : ";
+//       color: #f00;
+//       font-weight: bold;
+//     }
+//   }
+// }
 
 footer {
     width: 1350px;

@@ -115,16 +115,17 @@ main {
     main #intro-image img {
       max-width: 100%;
       height: auto; }
-    main #intro-image .errormsg {
-      text-align: center;
-      padding-top: 0; }
-      main #intro-image .errormsg .my-errors {
-        color: #333;
-        font-size: 1.2rem; }
-        main #intro-image .errormsg .my-errors li:before {
-          content: "! Error : ";
-          color: #f00;
-          font-weight: bold; }
+  main .errormsg {
+    text-align: center;
+    padding-top: 0;
+    color: #333;
+    font-size: 0.9rem;
+    list-style: none; }
+    main .errormsg li:before {
+      content: "! Error: ";
+      color: #f00;
+      font-weight: bold;
+      font-size: 1rem; }
   main #intro-text {
     width: 40%;
     height: auto;
