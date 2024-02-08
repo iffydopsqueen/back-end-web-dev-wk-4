@@ -47,10 +47,10 @@ body {
   flex-wrap: wrap; }
   .form-registration input {
     width: 100%;
-    margin: 0px 0 15px; }
+    margin: 0px 0 12px; }
   .form-registration .btn {
     flex: 1 0 100%;
-    margin-top: 15px; }
+    margin-top: 12px; }
 
 .register {
   float: right;
@@ -61,10 +61,10 @@ body {
   text-align: center;
   margin: 0 0 2rem;
   font-weight: bold;
-  padding-top: 50px; }
+  padding-top: 20px; }
 
 .listing-reg h2 {
-  text-align: center;
+  margin-left: 65px;
   font-weight: bold;
   padding-top: 15px; }
 
@@ -100,19 +100,24 @@ header {
 
 main {
   background: white;
-  width: 1350px;
+  width: 95%;
   min-height: 535px;
   padding: 1.5%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; }
   main #intro-image {
-    float: left;
-    width: 750px;
-    height: 500px; }
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
     main #intro-image img {
-      width: 800px; }
+      max-width: 100%;
+      height: auto; }
     main #intro-image .errormsg {
       text-align: center;
-      padding-top: 10px; }
+      padding-top: 0; }
       main #intro-image .errormsg .my-errors {
         color: #333;
         font-size: 1.2rem; }
@@ -121,8 +126,8 @@ main {
           color: #f00;
           font-weight: bold; }
   main #intro-text {
-    width: 550px;
-    height: 407px;
+    width: 40%;
+    height: auto;
     float: left;
     background: #d4d5d8;
     text-align: center;

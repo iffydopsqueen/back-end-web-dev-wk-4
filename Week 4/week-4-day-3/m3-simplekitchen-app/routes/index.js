@@ -39,12 +39,8 @@ router.get('/registrants', basic.check((req, res) => {
 // POST route for form submission
 router.post('/', 
     [
-        check('name')
-        .isLength({ min: 1 })
-        .withMessage('Please enter a name'),
-        check('email')
-        .isLength({ min: 1 })
-        .withMessage('Please enter an email'),
+        check('name').isLength({ min: 1 }).withMessage('Please enter a name'),
+        check('email').isLength({ min: 1 }).withMessage('Please enter an email'),
     ],
     (req, res) => {
         const errors = validationResult(req);

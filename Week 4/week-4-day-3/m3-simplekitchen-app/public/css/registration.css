@@ -6,10 +6,10 @@
   flex-wrap: wrap; }
   .form-registration input {
     width: 100%;
-    margin: 0px 0 15px; }
+    margin: 0px 0 12px; }
   .form-registration .btn {
     flex: 1 0 100%;
-    margin-top: 15px; }
+    margin-top: 12px; }
 
 .register {
   float: right;
